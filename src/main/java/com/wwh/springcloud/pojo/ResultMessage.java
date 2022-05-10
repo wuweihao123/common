@@ -20,4 +20,8 @@ public class ResultMessage implements Serializable {
     private Boolean success = true;
 
     private Object data = null;
+
+    public ResultMessage(Object data) {
+        this.data =data;
+    }
 }
