@@ -1,14 +1,29 @@
 package com.wwh.springcloud.uitl;
 
+import org.springframework.beans.BeanUtils;
+import org.springframework.util.CollectionUtils;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public interface Convert<V, P> {
 
-    void vo2po(V v);
+    default void vo2po(V v) {
+        if (!Objects.isNull(v)) {
+            BeanUtils.copyProperties(v, this);
+        }
+    }
 
-    List<P> vos2pos(List<V> list);
+    default List<P> vos2pos(List<V> list) {
+        return null;
+    }
 
-    V po2vo();
+    default V po2vo() {
+        return null;
+    }
 
-    List<V> pos2vos(List<P> list);
+    default List<V> pos2vos(List<P> list) {
+        return null;
+    }
 }
