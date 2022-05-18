@@ -1,9 +1,7 @@
 package com.wwh.springcloud.uitl;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
