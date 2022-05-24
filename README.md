@@ -34,3 +34,7 @@ localhost:8848/nacos
 初始账号密码 nacos nacos
 ```
 
+### 4、下载项目依赖源码命令
+```
+mvn dependency:resolve -Dclassifier=sources
+```
